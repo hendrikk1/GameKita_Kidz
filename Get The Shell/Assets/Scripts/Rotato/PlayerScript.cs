@@ -9,6 +9,11 @@ public class PlayerScript : MonoBehaviour {
 
     public bool win = false;
 
+    //this bool value to prevent the win/gameover condition
+    //going through infinite loop till the game restarted/move
+    //to the next level
+    private bool gameFinished = false;
+
     public Animator anim;
 
     public string nextLevel = "";
@@ -74,11 +79,13 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-	    if(gameOver && !win){
+	    if(gameOver && !win && !gameFinished){
             //Sound management
             bgmManager.StopBgm();
             sfxManager.PlaySfx(gameoverSfx);
-            Debug.Log("You Lose");
+
+            //for this boolean see description on declaration
+            gameFinished = true;
 
             anim.SetBool("Lose", true);
 
@@ -98,11 +105,13 @@ public class PlayerScript : MonoBehaviour {
             restart2.enabled = true;
         }
 
-        if(win && !gameOver){
+        if(win && !gameOver && !gameFinished){
             //Sound management
             bgmManager.StopBgm();
             sfxManager.PlaySfx(winSfx);
-            Debug.Log("You Win");
+
+            //for this boolean see description on declaration
+            gameFinished = true;
 
             winTextAnim.enabled = true;
             menuBtnAnim.enabled = true;
@@ -145,7 +154,6 @@ public class PlayerScript : MonoBehaviour {
             next.enabled = true;
             restart.enabled = true;
         }
-          
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
