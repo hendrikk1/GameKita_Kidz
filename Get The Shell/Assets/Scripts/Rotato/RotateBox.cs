@@ -14,7 +14,8 @@ public class RotateBox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mobileGame = true;
+        //hilangi komen untuk build ke android
+        //mobileGame = true;
         rotateZ = transform.rotation.z;
 	}
 	
