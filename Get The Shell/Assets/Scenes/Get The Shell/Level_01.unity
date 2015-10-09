@@ -698,7 +698,7 @@ GameObject:
   - 114: {fileID: 549060677}
   m_Layer: 0
   m_Name: Number1
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1599,7 +1599,7 @@ GameObject:
   - 114: {fileID: 1233192181}
   m_Layer: 0
   m_Name: Number1
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1974,6 +1974,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2.01963353
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1a3d338b7d04fc54093c43a71b77c3c2, type: 2}
+      propertyPath: m_TagString
+      value: Shell
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a3d338b7d04fc54093c43a71b77c3c2, type: 2}
   m_IsPrefabParent: 0
@@ -2332,7 +2336,7 @@ Transform:
   - {fileID: 1061065811}
   - {fileID: 553184854}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &1482752836
 MonoBehaviour:
   m_ObjectHideFlags: 0

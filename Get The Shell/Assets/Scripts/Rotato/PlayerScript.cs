@@ -122,47 +122,46 @@ public class PlayerScript : MonoBehaviour {
           
 	}
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        try { 
-            if(collision.collider.GetComponent<NumberScript>().isNumber){
-                numberCount += 1;
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Shell"){
+
+            if (collision.collider.GetComponent<NumberScript>().isNumber)
+            {
+                numberCount++;
+                //soundEffect.PlayOneShot(shellSound[numberCount-1]);
                 collision.collider.GetComponent<NumberScript>().numberIndex = numberCount;
-                collision.collider.GetComponent<NumberScript>().numberTouched = true;                
+                collision.collider.GetComponent<NumberScript>().numberTouched = true;
             }
         }
-        catch { 
-        
-        }
 
-        try
-        {
-            if(collision.collider.GetComponent<DeadZone>().deadZone){
+        if(collision.gameObject.tag == "Dead Zone"){
+            if (collision.collider.GetComponent<DeadZone>().deadZone)
+            {
                 Destroy(collision.gameObject);
                 gameOver = true;
             }
-        }
-        catch { }
+        }        
 
-        try { 
-            if(collision.collider.GetComponent<BoneScript>().isBone){
+        if(collision.gameObject.tag == "Bone"){
+            if (collision.collider.GetComponent<BoneScript>().isBone)
+            {
                 gameOver = true;
             }
-        }
-        catch { }
+        }        
 
-        try {
+        if(collision.gameObject.tag == "Poison Gaz"){
             if (collision.collider.GetComponent<PoisonGasScript>().isPoisonGas)
             {
                 gameOver = true;
             }
         }
-        catch { }
-
-        try { 
-            if(collision.collider.GetComponent<DeadlyPipeScript>().isDeadlyPipe){
+        
+        if(collision.gameObject.tag == "Thorn"){
+            if (collision.collider.GetComponent<DeadlyPipeScript>().isDeadlyPipe)
+            {
                 gameOver = true;
             }
-        }
-        catch { }
+        }        
     }
 }
