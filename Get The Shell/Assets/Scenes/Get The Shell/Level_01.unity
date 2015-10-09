@@ -406,13 +406,14 @@ MonoBehaviour:
   isPlayer: 1
   gameOver: 0
   win: 0
-  anim: {fileID: 0}
+  anim: {fileID: 182564432}
   nextLevel: Level_02
-  shells: {fileID: 0}
+  shells: {fileID: 946314514}
   getPointSfx:
   - {fileID: 8300000, guid: b26bffabcc0c90f40bca1596daae9ee7, type: 3}
   - {fileID: 8300000, guid: 4fae7a6f282df6c429238bbbf1fcc210, type: 3}
   - {fileID: 8300000, guid: 47781643f9a71f44483aaf7120f53967, type: 3}
+  jumpSound: {fileID: 8300000, guid: bcacaf1c83b9d5347be3f5cdd236247c, type: 3}
   winning: {fileID: 352524324}
   shell1: {fileID: 1319719623}
   shell2: {fileID: 55250655}
@@ -461,7 +462,7 @@ GameObject:
   - 114: {fileID: 287720884}
   m_Layer: 0
   m_Name: Dead Zone
-  m_TagString: Untagged
+  m_TagString: Dead Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1295,6 +1296,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &946314514 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400000, guid: 2aa3ef52f47dc5e4cb84a70ce32802b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581431037}
+  m_Script: {fileID: 11500000, guid: ea0e6d96624258e42bd8a2022222c7c4, type: 3}
 --- !u!212 &955164184 stripped
 SpriteRenderer:
   m_PrefabParentObject: {fileID: 21200006, guid: 1be0a2f8b1ab3f242b79dc97baef3298,
@@ -2152,7 +2159,7 @@ GameObject:
   - 114: {fileID: 1400287312}
   m_Layer: 0
   m_Name: Dead Zone
-  m_TagString: Untagged
+  m_TagString: Dead Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
