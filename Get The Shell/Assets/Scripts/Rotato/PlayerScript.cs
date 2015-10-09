@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
     public CircleCollider2D menu2, restart2;
     public AudioClip gameoverSfx;
 
-    public Animator gameoverTextAnim, menuBtn2Anim, restartBtn2Anim, snailSadAnim; 
+    public Animator gameoverTextAnim, menuBtn2Anim, restartBtn2Anim, snailSadAnim;
     
     void Awake()
     {
@@ -46,6 +46,9 @@ public class PlayerScript : MonoBehaviour {
     }
 	
 	void Start () {
+        //Sound management
+        bgmManager.StartBgm();
+
         shells = Object.FindObjectOfType<TimeScore>();
 
         gameOverText.enabled = false;
@@ -75,6 +78,7 @@ public class PlayerScript : MonoBehaviour {
             //Sound management
             bgmManager.StopBgm();
             sfxManager.PlaySfx(gameoverSfx);
+            Debug.Log("You Lose");
 
             anim.SetBool("Lose", true);
 
@@ -98,6 +102,7 @@ public class PlayerScript : MonoBehaviour {
             //Sound management
             bgmManager.StopBgm();
             sfxManager.PlaySfx(winSfx);
+            Debug.Log("You Win");
 
             winTextAnim.enabled = true;
             menuBtnAnim.enabled = true;
@@ -150,7 +155,7 @@ public class PlayerScript : MonoBehaviour {
             if (collision.collider.GetComponent<NumberScript>().isNumber)
             {
                 numberCount++;
-                //soundEffect.PlayOneShot(shellSound[numberCount-1]);
+                sfxManager.PlaySfx(getPointSfx[numberCount-1]);
                 collision.collider.GetComponent<NumberScript>().numberIndex = numberCount;
                 collision.collider.GetComponent<NumberScript>().numberTouched = true;
             }
