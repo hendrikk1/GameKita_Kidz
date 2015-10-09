@@ -10,4 +10,14 @@ public class BgmManager : MonoBehaviour {
         this.GetComponent<AudioSource>().clip = bgm;
         this.GetComponent<AudioSource>().Play();
     }
+
+    public void StopBgm()
+    {
+        this.GetComponent<AudioSource>().Stop();
+    }
+
+    public void StartBgm()
+    {
+        this.GetComponent<AudioSource>().Play();
+    }
 }
