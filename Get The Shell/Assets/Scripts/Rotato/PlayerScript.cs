@@ -27,8 +27,6 @@ public class PlayerScript : MonoBehaviour {
     private BgmManager bgmManager;
     private SfxManager sfxManager;
 
-    public AudioClip jumpSound;
-
     //win component
     public SpriteRenderer winning, shell1, shell2, shell3, shellTemplate, menuBtn, nextBtn, restartBtn, snailHappy;
     public MeshRenderer winText, scoreText;
@@ -199,9 +197,5 @@ public class PlayerScript : MonoBehaviour {
                 gameOver = true;
             }
         }        
-    }
-
-    public void PlayJumpSound() {
-        sfxManager.PlaySfx(jumpSound);
     }
 }

@@ -399,6 +399,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   nextLevel: Level_25
   shells: {fileID: 0}
+  getPointSfx:
+  - {fileID: 8300000, guid: b26bffabcc0c90f40bca1596daae9ee7, type: 3}
+  - {fileID: 8300000, guid: 4fae7a6f282df6c429238bbbf1fcc210, type: 3}
+  - {fileID: 8300000, guid: 47781643f9a71f44483aaf7120f53967, type: 3}
   winning: {fileID: 267180376}
   shell1: {fileID: 1054057152}
   shell2: {fileID: 1954372267}
@@ -414,6 +418,7 @@ MonoBehaviour:
   menu: {fileID: 29542351}
   next: {fileID: 1228513578}
   restart: {fileID: 573001584}
+  winSfx: {fileID: 8300000, guid: 433eeaa6c32748144b90599c697e2e34, type: 3}
   menuBtnAnim: {fileID: 29542353}
   nextBtnAnim: {fileID: 1228513580}
   restartBtnAnim: {fileID: 573001586}
@@ -429,6 +434,7 @@ MonoBehaviour:
   gameOverText: {fileID: 398642619}
   menu2: {fileID: 238583622}
   restart2: {fileID: 607400983}
+  gameoverSfx: {fileID: 8300000, guid: 1d9d968fcf08641449a119004dc55986, type: 3}
   gameoverTextAnim: {fileID: 398642621}
   menuBtn2Anim: {fileID: 238583625}
   restartBtn2Anim: {fileID: 607400986}
@@ -691,7 +697,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!114 &500709286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,7 +1502,7 @@ Transform:
   m_LocalScale: {x: 1.08000004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &995169215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1725,7 @@ Transform:
   m_LocalScale: {x: .800000012, y: 7.78601122, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &1227751209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,7 +2379,7 @@ Transform:
   m_LocalScale: {x: .800000012, y: 9.84791279, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!61 &1400287311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2519,7 +2525,7 @@ Transform:
   - {fileID: 1061065811}
   - {fileID: 521959680}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &1482752836
 MonoBehaviour:
   m_ObjectHideFlags: 0

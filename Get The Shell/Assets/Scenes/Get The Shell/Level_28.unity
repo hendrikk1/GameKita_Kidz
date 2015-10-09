@@ -399,6 +399,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   nextLevel: Level_29
   shells: {fileID: 0}
+  getPointSfx:
+  - {fileID: 8300000, guid: b26bffabcc0c90f40bca1596daae9ee7, type: 3}
+  - {fileID: 8300000, guid: 4fae7a6f282df6c429238bbbf1fcc210, type: 3}
+  - {fileID: 8300000, guid: 47781643f9a71f44483aaf7120f53967, type: 3}
   winning: {fileID: 803147247}
   shell1: {fileID: 2108243779}
   shell2: {fileID: 1401857543}
@@ -414,6 +418,7 @@ MonoBehaviour:
   menu: {fileID: 622989282}
   next: {fileID: 62530518}
   restart: {fileID: 448220246}
+  winSfx: {fileID: 8300000, guid: 433eeaa6c32748144b90599c697e2e34, type: 3}
   menuBtnAnim: {fileID: 622989285}
   nextBtnAnim: {fileID: 62530521}
   restartBtnAnim: {fileID: 448220249}
@@ -429,6 +434,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1901964704}
   menu2: {fileID: 422197844}
   restart2: {fileID: 1672017616}
+  gameoverSfx: {fileID: 8300000, guid: 1d9d968fcf08641449a119004dc55986, type: 3}
   gameoverTextAnim: {fileID: 1901964705}
   menuBtn2Anim: {fileID: 422197846}
   restartBtn2Anim: {fileID: 1672017618}
@@ -701,7 +707,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!114 &500709286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,7 +1293,7 @@ Transform:
   m_LocalScale: {x: 1.08000004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &934630821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,7 +2725,7 @@ Transform:
   - {fileID: 1061065811}
   - {fileID: 1620578066}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!114 &1482752836
 MonoBehaviour:
   m_ObjectHideFlags: 0
