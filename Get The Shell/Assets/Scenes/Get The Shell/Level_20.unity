@@ -448,7 +448,7 @@ MonoBehaviour:
   gameOver: 0
   win: 0
   anim: {fileID: 0}
-  nextLevel: Level_21
+  nextLevel: Level_31
   shells: {fileID: 0}
   getPointSfx:
   - {fileID: 8300000, guid: b26bffabcc0c90f40bca1596daae9ee7, type: 3}
@@ -1634,7 +1634,7 @@ Transform:
   m_LocalScale: {x: 1.08000004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &995169215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,7 +2754,7 @@ Transform:
   - {fileID: 1061065811}
   - {fileID: 1803091613}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!114 &1482752836
 MonoBehaviour:
   m_ObjectHideFlags: 0
