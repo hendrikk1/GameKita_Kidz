@@ -150,7 +150,7 @@ public class PlayerScript : MonoBehaviour {
             }
         }        
 
-        if(collision.gameObject.tag == "Poison Gaz"){
+        if(collision.gameObject.tag == "Bullet"){
             if (collision.collider.GetComponent<PoisonGasScript>().isPoisonGas)
             {
                 gameOver = true;
