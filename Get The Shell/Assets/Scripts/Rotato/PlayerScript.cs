@@ -15,11 +15,19 @@ public class PlayerScript : MonoBehaviour {
 
     public TimeScore shells;
 
+    //The 3 level sound played when the snail get each shell
+    public AudioClip[] getPointSfx = new AudioClip[3];
+
+    //Audio component
+    private BgmManager bgmManager;
+    private SfxManager sfxManager;
+
     //win component
     public SpriteRenderer winning, shell1, shell2, shell3, shellTemplate, menuBtn, nextBtn, restartBtn, snailHappy;
     public MeshRenderer winText, scoreText;
     public TextMesh score;
     public CircleCollider2D menu, next, restart;
+    public AudioClip winSfx;
 
     public Animator menuBtnAnim, nextBtnAnim, restartBtnAnim, shell1Anim, shell2Anim, shell3Anim, snailHappyAnim, winTextAnim;
 
@@ -27,11 +35,16 @@ public class PlayerScript : MonoBehaviour {
     public SpriteRenderer gameover, menuBtn2, restartBtn2, snailSad;
     public MeshRenderer gameOverText;
     public CircleCollider2D menu2, restart2;
+    public AudioClip gameoverSfx;
 
     public Animator gameoverTextAnim, menuBtn2Anim, restartBtn2Anim, snailSadAnim; 
     
-
-	// Use this for initialization
+    void Awake()
+    {
+        bgmManager = ScriptableObject.FindObjectOfType<BgmManager>();
+        sfxManager = ScriptableObject.FindObjectOfType<SfxManager>();
+    }
+	
 	void Start () {
         shells = Object.FindObjectOfType<TimeScore>();
 
@@ -59,6 +72,10 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
         
 	    if(gameOver && !win){
+            //Sound management
+            bgmManager.StopBgm();
+            sfxManager.PlaySfx(gameoverSfx);
+
             anim.SetBool("Lose", true);
 
             gameoverTextAnim.enabled = true;
@@ -74,10 +91,14 @@ public class PlayerScript : MonoBehaviour {
             snailSad.enabled = true;
 
             menu2.enabled = true;
-            restart2.enabled = true;                     
+            restart2.enabled = true;
         }
 
         if(win && !gameOver){
+            //Sound management
+            bgmManager.StopBgm();
+            sfxManager.PlaySfx(winSfx);
+
             winTextAnim.enabled = true;
             menuBtnAnim.enabled = true;
             nextBtnAnim.enabled = true;
@@ -87,7 +108,7 @@ public class PlayerScript : MonoBehaviour {
             shells.timeIsRunning = false;
             //Time.timeScale = 0;
             winText.enabled = true;
-            //Application.LoadLevel(nextLevel);  
+            //Application.LoadLevel(nextLevel);
             winning.enabled = true;
             shellTemplate.enabled = true;
             menuBtn.enabled = true;
