@@ -544,7 +544,7 @@ Transform:
   m_LocalScale: {x: .800000012, y: 10.8028603, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!114 &287720884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,7 +676,7 @@ GameObject:
   - 114: {fileID: 334138527}
   m_Layer: 0
   m_Name: obs
-  m_TagString: Untagged
+  m_TagString: Thorn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2721,7 +2721,7 @@ Transform:
   m_LocalScale: {x: .800000012, y: 10.086647, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!61 &1400287311
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -443,7 +443,7 @@ GameObject:
   - 114: {fileID: 287720884}
   m_Layer: 0
   m_Name: Dead Zone
-  m_TagString: Untagged
+  m_TagString: Dead Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,7 +588,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!114 &500709286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ GameObject:
   - 114: {fileID: 549060677}
   m_Layer: 0
   m_Name: Number1
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1256,7 +1256,7 @@ Transform:
   m_LocalScale: {x: 1.08000004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &995169215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1528,7 @@ GameObject:
   - 114: {fileID: 1134969775}
   m_Layer: 0
   m_Name: Dead Zone
-  m_TagString: Untagged
+  m_TagString: Dead Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1733,7 +1733,7 @@ GameObject:
   - 114: {fileID: 1233192181}
   m_Layer: 0
   m_Name: Number1
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2028,6 +2028,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2.05584908
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1a3d338b7d04fc54093c43a71b77c3c2, type: 2}
+      propertyPath: m_TagString
+      value: Shell
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a3d338b7d04fc54093c43a71b77c3c2, type: 2}
   m_IsPrefabParent: 0
@@ -2178,7 +2182,7 @@ GameObject:
   - 114: {fileID: 1400287312}
   m_Layer: 0
   m_Name: Dead Zone
-  m_TagString: Untagged
+  m_TagString: Dead Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2346,7 +2350,7 @@ Transform:
   - {fileID: 1061065811}
   - {fileID: 553184854}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!114 &1482752836
 MonoBehaviour:
   m_ObjectHideFlags: 0

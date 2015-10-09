@@ -535,7 +535,7 @@ Transform:
   m_LocalScale: {x: .800000012, y: 10.086648, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!114 &287720884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,7 +625,7 @@ GameObject:
   - 114: {fileID: 382441138}
   m_Layer: 0
   m_Name: obs
-  m_TagString: Untagged
+  m_TagString: Thorn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1523,7 +1523,7 @@ Transform:
   m_LocalScale: {x: 1.08000004, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
 --- !u!102 &924497484 stripped
 TextMesh:
   m_PrefabParentObject: {fileID: 10200000, guid: 1315495c1c8ff9c40b512bcfa6612271,
@@ -2936,7 +2936,7 @@ Transform:
   m_LocalScale: {x: .660000026, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &1910629996
 GameObject:
   m_ObjectHideFlags: 0
