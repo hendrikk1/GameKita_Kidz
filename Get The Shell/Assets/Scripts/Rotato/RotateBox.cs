@@ -4,7 +4,7 @@ using System.Collections;
 public class RotateBox : MonoBehaviour {
     private Touch touch;
     public float rotateZ = 0;
-    public bool mobileGame = false;
+    //public bool mobileGame = false;
     public float rotateSpeed = 2;
     public float rotateZTemp = 0;
     
@@ -21,7 +21,7 @@ public class RotateBox : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(mobileGame){
+        //if(mobileGame){
             if (Input.touchCount == 1)
             {
                 touch = Input.GetTouch(0);
@@ -48,7 +48,7 @@ public class RotateBox : MonoBehaviour {
                 }
 
             }
-        } else if(!mobileGame){
+        //} else if(!mobileGame){
             if(Input.GetKey(KeyCode.RightArrow)){
                 rotateZ -= rotateSpeed;
             }
@@ -56,7 +56,7 @@ public class RotateBox : MonoBehaviour {
             if(Input.GetKey(KeyCode.LeftArrow)){
                 rotateZ += rotateSpeed;
             }
-        }
+        //}
 	    
         this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotateZ));
         anim.SetFloat("Speed", Mathf.Abs(rotateZ));
