@@ -439,6 +439,8 @@ MonoBehaviour:
   gameOverText: {fileID: 1398888818}
   menu2: {fileID: 1257371528}
   restart2: {fileID: 132265843}
+  gameoverSfx: {fileID: 0}
+  winSfx: {fileID: 0}
   gameoverTextAnim: {fileID: 1398888819}
   menuBtn2Anim: {fileID: 1257371530}
   restartBtn2Anim: {fileID: 132265845}
