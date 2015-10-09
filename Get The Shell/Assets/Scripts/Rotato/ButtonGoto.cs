@@ -7,4 +7,9 @@ public class ButtonGoto : MonoBehaviour {
     public void Play() {
         Application.LoadLevel(scenes);
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
