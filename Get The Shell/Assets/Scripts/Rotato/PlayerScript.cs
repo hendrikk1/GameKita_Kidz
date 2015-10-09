@@ -72,6 +72,10 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
         
 	    if(gameOver && !win){
+            //Sound management
+            bgmManager.StopBgm();
+            sfxManager.PlaySfx(gameoverSfx);
+
             anim.SetBool("Lose", true);
 
             gameoverTextAnim.enabled = true;
@@ -88,13 +92,13 @@ public class PlayerScript : MonoBehaviour {
 
             menu2.enabled = true;
             restart2.enabled = true;
-
-            //Sound management
-            bgmManager.StopBgm();
-            sfxManager.PlaySfx(gameoverSfx);
         }
 
         if(win && !gameOver){
+            //Sound management
+            bgmManager.StopBgm();
+            sfxManager.PlaySfx(winSfx);
+
             winTextAnim.enabled = true;
             menuBtnAnim.enabled = true;
             nextBtnAnim.enabled = true;
@@ -111,10 +115,6 @@ public class PlayerScript : MonoBehaviour {
             restartBtn.enabled = true;
             nextBtn.enabled = true;
             snailHappy.enabled = true;
-
-            //Sound management
-            bgmManager.StopBgm();
-            sfxManager.PlaySfx(winSfx);
 
             scoreText.enabled = true;
             score.text = "Score : " + shells.starScore*1000;

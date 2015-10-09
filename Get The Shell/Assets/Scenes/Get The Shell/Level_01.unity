@@ -409,6 +409,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   nextLevel: Level_02
   shells: {fileID: 0}
+  getPointSfx:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   winning: {fileID: 352524324}
   shell1: {fileID: 1319719623}
   shell2: {fileID: 55250655}
@@ -424,6 +428,7 @@ MonoBehaviour:
   menu: {fileID: 1182958269}
   next: {fileID: 593510890}
   restart: {fileID: 1835210383}
+  winSfx: {fileID: 8300000, guid: 433eeaa6c32748144b90599c697e2e34, type: 3}
   menuBtnAnim: {fileID: 1182958272}
   nextBtnAnim: {fileID: 593510892}
   restartBtnAnim: {fileID: 1835210386}
@@ -439,8 +444,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1398888818}
   menu2: {fileID: 1257371528}
   restart2: {fileID: 132265843}
-  gameoverSfx: {fileID: 0}
-  winSfx: {fileID: 0}
+  gameoverSfx: {fileID: 8300000, guid: 1d9d968fcf08641449a119004dc55986, type: 3}
   gameoverTextAnim: {fileID: 1398888819}
   menuBtn2Anim: {fileID: 1257371530}
   restartBtn2Anim: {fileID: 132265845}
