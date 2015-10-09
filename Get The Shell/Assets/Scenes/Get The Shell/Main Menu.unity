@@ -160,7 +160,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 67783294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &67783294
@@ -202,6 +213,7 @@ GameObject:
   - 92: {fileID: 607347463}
   - 124: {fileID: 607347462}
   - 81: {fileID: 607347461}
+  - 114: {fileID: 607347466}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -275,6 +287,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &607347466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607347460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b562514f8f424de4082d277405b54cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenes: Stage
 --- !u!1 &763460325
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 805519209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.15209889, y: 3.1520977, z: 3.1520977}
   m_Children:
   - {fileID: 763460326}
   - {fileID: 1035319667}
@@ -439,7 +463,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223820450}
+      - m_Target: {fileID: 607347466}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -697,7 +721,6 @@ GameObject:
   - 114: {fileID: 1223820447}
   - 114: {fileID: 1223820446}
   - 95: {fileID: 1223820445}
-  - 114: {fileID: 1223820450}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -749,11 +772,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 720, y: 1280}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -795,18 +818,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1223820450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1223820444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b562514f8f424de4082d277405b54cbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scenes: Stage
 --- !u!1 &1365339410
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,14 +917,14 @@ RectTransform:
   m_GameObject: {fileID: 1743147361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .374444306, y: .374444157, z: .374444157}
   m_Children: []
   m_Father: {fileID: 2017018331}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: -37}
-  m_SizeDelta: {x: 200, y: 120}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1743147363
 MonoBehaviour:
@@ -930,7 +941,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 59a5800f69f764272a193320f2b229b2, type: 3}
-    m_FontSize: 35
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -970,7 +981,7 @@ RectTransform:
   m_GameObject: {fileID: 2017018330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.15209889, y: 3.1520977, z: 3.1520977}
   m_Children:
   - {fileID: 1743147362}
   - {fileID: 67783292}
