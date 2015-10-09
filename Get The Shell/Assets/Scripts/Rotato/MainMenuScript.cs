@@ -3,18 +3,11 @@ using System.Collections;
 
 public class MainMenuScript : MonoBehaviour {
     public ButtonTouched btnPlay, btnSetting, btnHelp, btnAbout, btnExtras;
-    public Animator play, setting, help, about, extras;
 
     public SpriteRenderer btnPlaySprite, btnSettingSprite, btnHelpSprite, btnAboutSprite, btnExtrasSprite;
 
 	// Use this for initialization
 	void Start () {
-        play.enabled = false;
-        setting.enabled = false;
-        help.enabled = false;
-        about.enabled = false;
-        extras.enabled = false;
-
         btnPlaySprite.enabled = false;
         btnSettingSprite.enabled = false;
         btnHelpSprite.enabled = false;
@@ -50,11 +43,6 @@ public class MainMenuScript : MonoBehaviour {
 	}
 
     public void PlayUIAnimation() {
-        play.enabled = true;
-        setting.enabled = true;
-        help.enabled = true;
-        about.enabled = true;
-        extras.enabled = true;        
     }
 
     public void ShowSprite() {
