@@ -4,17 +4,7 @@ using System.Collections;
 public class ButtonGoto : MonoBehaviour {
     public string scenes;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void OnMouseDown() {
+    public void Play() {
         Application.LoadLevel(scenes);
     }
 }

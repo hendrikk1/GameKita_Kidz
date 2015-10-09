@@ -427,7 +427,7 @@ Transform:
   m_LocalScale: {x: .251450598, y: .251450598, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
 --- !u!50 &182564435
 Rigidbody2D:
   serializedVersion: 2
@@ -462,6 +462,11 @@ MonoBehaviour:
   anim: {fileID: 0}
   nextLevel: Level_33
   shells: {fileID: 0}
+  getPointSfx:
+  - {fileID: 8300000, guid: b26bffabcc0c90f40bca1596daae9ee7, type: 3}
+  - {fileID: 8300000, guid: 4fae7a6f282df6c429238bbbf1fcc210, type: 3}
+  - {fileID: 8300000, guid: 47781643f9a71f44483aaf7120f53967, type: 3}
+  jumpSound: {fileID: 8300000, guid: bcacaf1c83b9d5347be3f5cdd236247c, type: 3}
   winning: {fileID: 1575274796}
   shell1: {fileID: 810211348}
   shell2: {fileID: 902350038}
@@ -477,6 +482,7 @@ MonoBehaviour:
   menu: {fileID: 1268573652}
   next: {fileID: 615165525}
   restart: {fileID: 1619531202}
+  winSfx: {fileID: 8300000, guid: 433eeaa6c32748144b90599c697e2e34, type: 3}
   menuBtnAnim: {fileID: 1268573655}
   nextBtnAnim: {fileID: 615165528}
   restartBtnAnim: {fileID: 1619531205}
@@ -492,6 +498,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1282794022}
   menu2: {fileID: 2014346075}
   restart2: {fileID: 1212736660}
+  gameoverSfx: {fileID: 8300000, guid: 1d9d968fcf08641449a119004dc55986, type: 3}
   gameoverTextAnim: {fileID: 1282794025}
   menuBtn2Anim: {fileID: 2014346079}
   restartBtn2Anim: {fileID: 1212736664}
@@ -643,7 +650,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!114 &500709286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,7 +1648,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!114 &995169218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,7 +2384,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!114 &1362030642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2736,7 +2743,7 @@ Transform:
   m_LocalScale: {x: .800000012, y: 11.3055964, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1001 &1693955298
 Prefab:
   m_ObjectHideFlags: 0
