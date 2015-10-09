@@ -9,6 +9,11 @@ public class PlayerScript : MonoBehaviour {
 
     public bool win = false;
 
+    //this bool value to prevent the win/gameover condition
+    //going through infinite loop till the game restarted/move
+    //to the next level
+    private bool gameFinished = false;
+
     public Animator anim;
 
     public string nextLevel = "";
@@ -37,7 +42,7 @@ public class PlayerScript : MonoBehaviour {
     public CircleCollider2D menu2, restart2;
     public AudioClip gameoverSfx;
 
-    public Animator gameoverTextAnim, menuBtn2Anim, restartBtn2Anim, snailSadAnim; 
+    public Animator gameoverTextAnim, menuBtn2Anim, restartBtn2Anim, snailSadAnim;
     
     void Awake()
     {
@@ -46,6 +51,9 @@ public class PlayerScript : MonoBehaviour {
     }
 	
 	void Start () {
+        //Sound management
+        bgmManager.StartBgm();
+
         shells = Object.FindObjectOfType<TimeScore>();
 
         gameOverText.enabled = false;
@@ -71,10 +79,13 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-	    if(gameOver && !win){
+	    if(gameOver && !win && !gameFinished){
             //Sound management
             bgmManager.StopBgm();
             sfxManager.PlaySfx(gameoverSfx);
+
+            //for this boolean see description on declaration
+            gameFinished = true;
 
             anim.SetBool("Lose", true);
 
@@ -94,10 +105,13 @@ public class PlayerScript : MonoBehaviour {
             restart2.enabled = true;
         }
 
-        if(win && !gameOver){
+        if(win && !gameOver && !gameFinished){
             //Sound management
             bgmManager.StopBgm();
             sfxManager.PlaySfx(winSfx);
+
+            //for this boolean see description on declaration
+            gameFinished = true;
 
             winTextAnim.enabled = true;
             menuBtnAnim.enabled = true;
@@ -140,7 +154,6 @@ public class PlayerScript : MonoBehaviour {
             next.enabled = true;
             restart.enabled = true;
         }
-          
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -150,7 +163,7 @@ public class PlayerScript : MonoBehaviour {
             if (collision.collider.GetComponent<NumberScript>().isNumber)
             {
                 numberCount++;
-                //soundEffect.PlayOneShot(shellSound[numberCount-1]);
+                sfxManager.PlaySfx(getPointSfx[numberCount-1]);
                 collision.collider.GetComponent<NumberScript>().numberIndex = numberCount;
                 collision.collider.GetComponent<NumberScript>().numberTouched = true;
             }
