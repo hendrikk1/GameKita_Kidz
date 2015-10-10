@@ -14,6 +14,6 @@ public class MenuButton : MonoBehaviour {
 	}
 
     void OnMouseDown() {
-        Application.LoadLevel("Stage");
+        Application.LoadLevel("Map");
     }
 }
