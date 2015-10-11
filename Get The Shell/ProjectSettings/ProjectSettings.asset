@@ -71,7 +71,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.Gamekita.Gift
+  bundleIdentifier: com.Gamekita.GetTheShell
   bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
@@ -121,8 +121,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Kevin/Desktop/GetTheShell.keystore
+  AndroidKeyaliasName: gts
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
